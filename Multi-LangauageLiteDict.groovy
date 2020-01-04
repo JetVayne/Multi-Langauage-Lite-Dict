@@ -54,6 +54,15 @@ import groovy.transform.Field;
 @Field String lang = "zh-tw";	// the language you want, ex: ar, ko, ja, fr, th...
 @Field int stopLevel = 5;	// the level of this category you want to get
 
+// load log4j
+DOMConfigurator.configure("C:/log4j.xml");
+try {
+	
+	start();
+	
+} catch (Exception e) {
+	logger.error(getStackTrace(e));
+}
 
 def void start(){
 
